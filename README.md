@@ -50,6 +50,44 @@ This project implements a real-time, cost-effective, and serverless data pipelin
   Automatically handles varying data volumes without manual intervention or provisioning limits.
 
 
+## Terraform Deployment Instructions
+
+### Prerequisites
+- Terraform installed (v1.0+)
+- AWS CLI configured with appropriate credentials and region
+- IAM permissions to create IoT, Lambda, Firehose, and S3 resources
+
+### Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/MLMoh/apartment-energy-monitoring.git
+   cd apartment-energy-monitoring
+
+2. **Initialize Terraform**
+
+    ```bash
+    terraform init
+    ```
+
+3. **Preview the infrastructure**
+
+    ```bash
+    terraform plan
+    ```
+
+4. **Deploy the infrastructure**
+
+    ```bash
+    terraform apply
+    ```
+
+5. **Destroy resources when done**
+
+    ```bash
+    terraform destroy
+    ```
+
 
 # apartment-energy-monitoring
 IoT-based serverless data pipeline for monitoring apartment energy consumption using AWS services (IoT Core, Lambda, Firehose, S3).
