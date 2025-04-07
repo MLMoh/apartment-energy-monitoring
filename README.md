@@ -32,6 +32,24 @@ This project implements a real-time, cost-effective, and serverless data pipelin
   Used for monitoring Lambda execution logs, debugging, and operational visibility.
 
 
+## Security & Cost Considerations
+
+- **Encryption**  
+  All data is encrypted in transit (using TLS via MQTT) and at rest (via S3-managed encryption and IAM roles).
+
+- **IAM Roles**  
+  Fine-grained permissions restrict access to only required resources. Lambda has permission to write to Firehose, and Firehose has permission to write to S3.
+
+- **Serverless Cost Efficiency**  
+  No need to provision EC2 instances or manage servers. Costs are based on usage:
+  - Lambda charges per execution time.
+  - Firehose charges per data volume ingested.
+  - S3 charges based on storage used.
+
+- **Scalability**  
+  Automatically handles varying data volumes without manual intervention or provisioning limits.
+
+
 
 # apartment-energy-monitoring
 IoT-based serverless data pipeline for monitoring apartment energy consumption using AWS services (IoT Core, Lambda, Firehose, S3).
